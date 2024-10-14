@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar{/*função imortante para esconder as barras de rolagem, neste caso estava-se criando uma rolangem lateral somente por causa da barra de rolagem vertical*/
+    width: 0px;
+    height: 0px;
+}
+img{
+    width: 100vw;
+}
+a{
+    display: block;/*configuração para que a palavra 'ACESSE' apareça embaixo da imagem*/
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    background-color: rgba(65, 65, 65, 0.461);
+    transition-duration: 0.2s;/*configuração usada para o background color não aparecer de forma repentina e sim de forma mais suave*/
+}
