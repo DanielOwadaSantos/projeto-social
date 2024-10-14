@@ -22,8 +22,8 @@
  }
  #telefone{
     position: absolute;
-    height: 302px;
-    width: 150px;
+    height: 450px;/*este é o tamanho do celular a ser mostrado na tela, é exatamente o tamanho da imagem que foi feita no seu doc*/
+    width: 223px;
     background: url('../imagens/frame-iphone-pq.png');
     background-repeat: no-repeat;
     top: 50%;
@@ -32,8 +32,24 @@
  }
  #tela{/*Aqui foram feitas todas as configurações para que a imagem de fundo do celular coubese extamente na tela e também configurado com 'background-size:cover' na pagina 'home.html'*/
     position: relative;
-    top: 39px;
-    left: 11px;
-    width: 127px;
-    height: 226px;
+    top: 58px;/*ajustando a figura para ficar exatamente ao topo e a esquerda da tela do celular*/
+    left: 17px;
+    width: 190px;/*depois de fixar a imagem no topo e a esquerda da tela, este é o processo de esticar a imagem para baixo e para a diretita, fazendo com que fique do tamanho ideal*/
+    height: 337px;
  }
+ section#redes-sociais{
+    text-align: right;/*configuração pra deixar os ícones alinhados à direita*/
+ }
+ section#redes-sociais img{/*Tambem poderia ser 'section#redes-sociais > a > img*/
+    width: 50px;/*Diminuindo de tamanho os ícones*/
+    margin: 10px;
+    border-radius: 50%;/*configuração usada para deixar os ícones redondos*/
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.39);
+    box-sizing: border-box/*configuração importante para evitar que ao sobrepor o mouse sobre algum ícone, os outros se movam, tornado-os estáticos*/;
+}
+section#redes-sociais img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.557);
+    transform: translate(-2px, -2px);/*configuração usada para dar movimento suave aos ícones, neste caso irão se mover um pouco para a esquerda e acima*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.397);/*como se teve o efeito de botão levantando, sua sombra também deverá ser aumentada para efeito mais realista*/
+    transition: transform 0.2s, border 0.2s;/*outro efeito importante para dar sensação de realismo, que é ao levantar o botão, não seja um movimento tão duro e sim mais suave dependendo do tempo proposto acima que no caso foi de 0.2s, ao lado colocamos também para que aconteça o mesmo com as bordas brancas que foi 'border 0.2s', separe-os por uma vírgula para evitar que não funcione*/
+}
